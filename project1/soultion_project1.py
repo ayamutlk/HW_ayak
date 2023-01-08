@@ -1,8 +1,8 @@
-def ecrypted(str):   #call a function receuve a variable
+def ecrypted(stri):   #call a function receuve a variable
     dic3={}    # empty dictionary definition
     dic= {}
     # str = str.lower()   #to lower the litter
-    for i in str.lower():     # lope for to count all of the litters
+    for i in stri.lower():     # lope for to count all of the litters
         if i.isalpha():
             count = dic.get(i, 0)
             count += 1
@@ -16,6 +16,7 @@ def ecrypted(str):   #call a function receuve a variable
     # to add and merge two list in dictonary (zip)
     dic3 = dict(zip(s[:5], ['e', 't', 'o', 'r']))
     dic3.update(zip(['e', 't', 'o', 'r'], s[:5]))
+
     print(dic3)
     return dic3
 
@@ -30,15 +31,14 @@ with open("file.txt", "w+") as file:
 
 #part2
 def decrypted_text(txt):
-    most_common_dict = {'h': 'e', 'k': 't', 'm': 'o', 'u': 'r', 'e': 'h', 't': 'k', 'o': 'm', 'r': 'u'}
-    new_string=''    # str
-    keys = list(most_common_dict.keys())    # list of keys dict in part1
-    # loop for letters if the letter in the list change the liter else no change the letter
-    for letter in txt:
+    new_string = ''     # str
+    most_common_dict =ecrypted(txt)    #creat to the function in part 1
+    keys = list(most_common_dict.keys())       # list of keys dict in part1
+    for letter in txt:    # loop for letters if the letter in the list change the liter else no change the letter
         if letter.lower() in keys:
-            new_string+=most_common_dict[letter.lower()]
+            new_string += most_common_dict[letter.lower()]
         else:
-            new_string+=letter
+            new_string += letter
     return new_string
 
 print(decrypted_text('''Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'
@@ -63,22 +63,20 @@ decrypted_file("file.txt")
 
 
 #part 4
-def func(result_file):
-    d1 = []       # list
-    my_file_results = open(result_file, "r")    # r to read not to write or a...
-    my_file_results.seek(0)
-    x= my_file_results.read().split()  # the file string metoda read, split to be word word in the string (in space)
-    longw= len(max(x, key=len))  # the max world in the list
-    d1= [my_file_results for word in my_file_results if len(my_file_results)==x]  # loop for to walk word word, if the len of the word
-    print(d1)
 
-func("results.txt")
-#
-#     regex = re.compile('[^a-zA-Z]',my_file_results)
-#     d1 = regex.sub(my_file_results)
-#     print(d1)
-# func("results.txt")
-#
+def longest_world(my_filee):
+    my_filee = open(my_filee, "r")    #path for results.txt wiht help the function, r for read the file witheuot apdate or write.
+    wordsList = my_filee.read().split()    # Getting the list of words of a file
+    longest_w = len(max(wordsList, key=len))     # finding the length of the longest word in the above words list.
+
+    # Storing all the words having the maximum length(longest word length)
+    # Here, we are checking all the words whose length is equal to that of the longest word
+    l_word = [textword for textword in wordsList if len(textword) == longest_w]
+    print("The following are the longest words from a text file:")
+    print(l_word)
+
+longest_world("results.txt")
+
 
 
 def numberline(resultfail):    # function that input the file in part3 and count the number of the line (output)
