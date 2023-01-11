@@ -8,7 +8,6 @@ def ecrypted(stri):   #call a function receuve a variable
             count += 1
             dic[i] = count
 
-
     # to sorted the dict and to but key and value with lambda and revers the dict to begening from the big vale to litel.
     dic2 = dict(sorted(dic.items(), key=lambda x: x[1], reverse=True))
     print(dic2)
@@ -49,7 +48,7 @@ mmps iks nmk eio; ---> hkmu'''))
 #part3
 # path the file in part 3
 def decrypted_file(file_path):
-    my_file = open(file_path,"a+") # a+ becuse we need to apdat in the file, to add text in the file.
+    my_file = open(file_path,"a+") # a+ because we need to apdat in the file, to add text in the file.
     my_file.seek(0)    # to start from the begining
     ecrypted=my_file.read()
     decrypted_txt=decrypted_text(ecrypted)
