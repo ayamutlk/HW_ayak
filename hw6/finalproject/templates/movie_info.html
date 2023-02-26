@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My movie</title>
+    <link href="{{ url_for('static', filename= 'mystyleinfo.css')}}" rel="stylesheet">
+    <style>
+
+    </style>
+
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    {% if movie_specific != [] %}
+  <a href="/" class="active">Home</a>
+  <a href="/alter_movie/{{movie_specific.id}}">alter</a>
+  <a href="/delete/{{movie_specific.id}}" >Delete</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+
+  </a>
+    {% else %}
+    <h1>Nothing found</h1>
+          {%endif%}
+</div>
+
+<div style="padding-left:16px">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+ <a href="/">
+     <div class="container" ><img src="../static/toshow.jpg" alt="logo" style="width:13%; height:13%;float: left; "> </div></a>
+</head>
+
+<br>
+<ol>
+    <center style="font-size=300%;color:white">
+  <h1 style="font-size=300%;color:#E8C148;">{{movie_specific.movie_title}}</h1></center>
+<br>
+      <div class="con">
+          <div class="image1">
+              <a><img src="/static/uploads/{{movie_specific.filename}}"style="align:right;" ></a>
+          </div>
+                {% autoescape off %}
+                {{movie_specific.video}}
+                {% endautoescape %}
+    </div>  <center>
+    <br><div class="box">
+    <h3 style="color:#E8C148;" >Director:</h3><h3 style="color:white;">{{movie_specific.director}}</h3></br>
+    <h3 style="color:#E8C148;">Main actors:</h3><h3 style="color:white;">{{movie_specific.actor}}</h3></br>
+    <h3 style="color:#E8C148;">Release year:</h3><h3>{{movie_specific.release_year}}</h3></br>
+    </div>
+    <h2 style="color:#E8C148;">Description:</h2><h2  style="color:white;">{{movie_specific.description}}</h2>
+    <br><br>
+    </center>
+</ol>
+
+
+<div class="box">
+<div class="con">
+    <div class="image1">
+    <form method="post" action="/add_review">
+        <h2 style="color:#E8C148">Add Review</h2><br>
+        <label><h3 style="color:white;">Name</h3></label>
+        <input type="text" name="name" required><br><br>
+        <label><h3 style="color:white;">Review</h3></label>
+        <textarea type="text" name="review_text"></textarea><br>
+           <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" />
+                  <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+            </div><br>
+                        <br><div class="riv">
+               <label><h4 style="color:white;">Rating</h4></label>
+                <input  type="hidden" name="movie_id" value="{{movie_specific.id}}">
+        <button class="button button5" type="submit">Add review</button>
+</div>
+
+
+
+
+
+    </div></div></div>
+
+<ol style="color:white;">
+    {%for review in reviews_specific %}<br>
+    <h3><li>Name:    {{review.name}}</h3></li>
+    {{review.review_text}}
+    {{review.rating}}
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+    {%endfor%}
+
+
+</ol></div>
+<br><br>
+
+
+
+<br>
+<div class="button" style="float:right;"> <a href="#top"><span>go to the top</span></a></button>
+</div>
+</body>
+</html>
