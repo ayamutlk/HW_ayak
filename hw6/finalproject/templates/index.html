@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <link href="{{ url_for('static', filename= 'mystyleindex.css')}}" rel="stylesheet">
+
+</head>
+<body>
+<a align="right">
+    <form action ="/" method="POST" id="searchForm">
+    <input type="text" id="search " name="search">
+    <input id="submit" name="submit" type="submit" value="Search">
+    </form></a>
+
+<a href="/add_data" <button class="button"  style="vertical-align:middle"><span>Add movies </span></button></a>
+<div class="bg">
+<center>
+        <h1><a href="#0">To-Show</a></h1>
+ <form  style="text-align:center;" action="/action_page.php">
+</form>
+    </center>
+
+
+
+       <br>
+<br><br><br>
+
+    {% for movie in movies_data%}
+        <a href="{{url_for('movie_info', movie_id=movie.id)}}">
+           <div class="container"> <img style="width:85%"  src="{{ url_for('display_image', filename=movie.filename)}}">
+        </a></div>
+    {%endfor%}
+
+</div>
+
+</body>
+</html>
