@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies data management</title>
+    <link href="{{ url_for('static', filename= 'mystyle.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+ <a href="/">
+     <div class="container" ><img src="../static/hoo.png" alt="logo" style="width:5%; height:7%;float: left; "> </div></a>
+    </div>
+
+    <center style="font-size:200%">
+        <form action="/add" method="post" enctype="multipart/form-data">
+            <h1>Add new movie</h1>
+            <p>            <div class="box">
+<div class="con">
+    <div class="image1">
+                <input type="file" name="filename" required>
+            </p>
+
+            <label>Movie title</label>
+            <input type="text" name="movie_title" required><br><br>
+            <label>Description</label>
+            <textarea name="description" required></textarea><br><br>
+            <label>Director</label>
+            <input type="text" name="director" required><br><br>
+            <label>Main actors</label>
+            <input type="text" name="actor" required><br><br>
+            <label>Release year</label>
+            <input type="number" name="release_year" required><br><br>
+            <label>Video</label>
+            <input type="text" name="video" required>
+        <button class="button button5" type="submit">ADD</button></div></div></div>
+        </form>
+
+
+    </center>
+</body>
+</html>

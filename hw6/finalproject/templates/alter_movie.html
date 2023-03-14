@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alter movie</title>
+    <link href="{{ url_for('static', filename= 'mystyle.css')}}" rel="stylesheet">
+
+
+</head>
+<body>
+ <a href="/">
+     <div class="container" ><img src="../static/imaggg.jpg" alt="logo" style="width:7%; height:7%;float: left; ">
+    </a> </div>
+<center style="font-size:200%">
+<form method="post" enctype="multipart/form-data">
+
+        <h1 ><labe>Poster update</labe></h1>
+
+          <div class="box">
+        <input type="file" name="filename"><div class="box">
+
+        <label>Movie title</label>
+        <input type="text" name="movie_title"></br><br>
+        <label>Description</label>
+        <textarea type="text" name="description"></textarea></br><br>
+        <label>Director</label>
+        <input type="text" name="director" ></br><br>
+     <label>Main actors</label>
+        <input type="text" name="actor" ></br><br>
+        <label>Release year</label>
+        <input type="number" name="release_year"></br><br>
+        <label>Video</label>
+        <input type="text" name="video"></br><br>
+        <button type="submit">Update</button>
+    </form>
+    </div>
+    </center>
+
+</body>
+</html>

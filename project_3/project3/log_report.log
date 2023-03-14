@@ -1,0 +1,70 @@
+2023-03-07 00:17:40,344 : INFO: test_add_movie :The page of info_movie is opened
+2023-03-07 00:17:51,383 : INFO: test_search_capital_smoll :The page of 'info' is opened
+2023-03-07 00:18:01,136 : INFO: test_update_title :The page of 'info' is opened
+2023-03-07 00:18:09,103 : INFO: test_add_comment :The page of 'contact us' is opened
+2023-03-07 00:18:09,113 : INFO: test_add_comment :The page of 'info' is opened
+2023-03-07 00:18:09,113 : INFO: test_add_comment :The page of 'info' is opened
+2023-03-07 00:18:18,686 : INFO: test_top_button :The page will go to the top
+2023-03-07 00:18:30,760 : INFO: test_update_description :The update description will appear
+2023-03-07 00:18:39,849 : INFO: test_update_director :The update director will appear
+2023-03-07 00:18:49,019 : INFO: test_update_main_actors :The update main actor will appear
+2023-03-07 00:18:58,259 : INFO: test_update_reales_year :The update title will appear
+2023-03-07 00:19:37,533 : INFO: test_login_correct :The password and the user nam is correct
+2023-03-07 00:19:42,049 : INFO: test_login_error :The password and user nam is error will gaven msg: 'that error'
+2023-03-07 00:20:13,424 : INFO: test_to_info_page :The page of 'info' is opened
+2023-03-07 00:20:18,972 : INFO: test_logo_img :The page of 'info' is opened
+2023-03-07 00:20:21,155 : INFO: test_go_about_page :The page of 'about' is opened
+2023-03-07 00:20:21,156 : DEBUG: test_go_about_page :
+2023-03-07 00:20:25,409 : INFO: test_go_login_page :The page of 'login' is opened
+2023-03-07 00:20:25,410 : DEBUG: test_go_login_page :
+2023-03-07 00:21:10,504 : INFO: test_search_movie :The search on title of movie will gaven the info page for this movie
+2023-03-07 00:21:10,505 : DEBUG: test_search_movie :
+2023-03-07 00:21:14,363 : INFO: test_search_nothing_found :The page of 'info' is opened
+2023-03-07 00:32:29,307 : INFO: test_update_description :The update description will appear
+2023-03-07 00:42:09,911 : INFO: test_search_nothing_found :The page of 'info' is opened
+2023-03-07 00:43:52,740 : INFO: test_search_nothing_found :The page of 'info' is opened
+2023-03-07 00:45:02,491 : INFO: test_search_nothing_found :The page of 'info' is opened
+2023-03-07 00:45:02,491 : DEBUG: test_search_nothing_found :
+2023-03-07 00:45:59,025 : INFO: test_add_movie :The page of info_movie is opened
+2023-03-07 00:46:06,449 : INFO: test_search_capital_smoll :The page of 'info' is opened
+2023-03-07 00:46:12,788 : INFO: test_delete_movie :The page of 'info' is opened
+2023-03-07 00:46:20,518 : INFO: test_update_title :The page of 'info' is opened
+2023-03-07 00:46:27,908 : INFO: test_add_comment :The page of 'contact us' is opened
+2023-03-07 00:46:27,923 : INFO: test_add_comment :The page of 'info' is opened
+2023-03-07 00:46:27,923 : INFO: test_add_comment :The page of 'info' is opened
+2023-03-07 00:46:34,455 : INFO: test_top_button :The page will go to the top
+2023-03-07 00:46:42,105 : INFO: test_update_description :The update description will appear
+2023-03-07 00:46:53,422 : INFO: test_update_director :The update director will appear
+2023-03-07 00:47:09,709 : INFO: test_update_main_actors :The update main actor will appear
+2023-03-07 00:47:26,753 : INFO: test_update_reales_year :The update title will appear
+2023-03-07 00:47:34,820 : INFO: test_reating_tow :The rating will appear two
+2023-03-07 00:47:43,570 : INFO: test_reating_three :The rating will appear three
+2023-03-07 00:48:12,453 : INFO: test_reating_four :The rating will appear four
+2023-03-07 00:48:20,147 : INFO: test_reating_one :The raeting will appear one
+2023-03-07 00:48:24,223 : INFO: test_login_correct :The password and the user nam is correct
+2023-03-07 00:48:28,689 : INFO: test_login_error :The password and user nam is error will gaven msg: 'that error'
+2023-03-07 00:49:00,293 : INFO: test_delete_review :The movie will deleted from the homepage
+2023-03-07 00:49:07,554 : INFO: test_to_info_page :The page of 'info' is opened
+2023-03-07 00:49:13,119 : INFO: test_logo_img :The page of 'info' is opened
+2023-03-07 00:49:15,225 : INFO: test_go_about_page :The page of 'about' is opened
+2023-03-07 00:49:15,225 : DEBUG: test_go_about_page :
+2023-03-07 00:49:19,220 : INFO: test_go_login_page :The page of 'login' is opened
+2023-03-07 00:49:19,220 : DEBUG: test_go_login_page :
+2023-03-07 00:49:37,692 : INFO: test_search_movie :The search on title of movie will gaven the info page for this movie
+2023-03-07 00:49:37,693 : DEBUG: test_search_movie :
+2023-03-07 00:49:41,689 : INFO: test_search_nothing_found :The page of 'info' is opened
+2023-03-07 00:49:41,689 : DEBUG: test_search_nothing_found :
+2023-03-07 09:30:33,300 : INFO: test_add_movie :The page of info_movie is opened
+2023-03-07 09:32:20,731 : INFO: test_login_error :The password and user nam is error will gaven msg: 'that error'
+2023-03-10 12:23:58,198 : INFO: test_add_movie :The page of info_movie is opened
+2023-03-10 12:28:57,607 : INFO: test_search_capital_smoll :The page of 'info' is opened
+2023-03-10 12:30:43,796 : INFO: test_search_capital_smoll :The page of 'info' is opened
+2023-03-10 12:32:12,342 : INFO: test_search_capital_smoll :The page of 'info' is opened
+2023-03-11 21:42:02,588 : INFO: test_title_homePage :The title of the home page is 'TO-SHOW'
+2023-03-11 21:42:02,588 : DEBUG: test_title_homePage :
+2023-03-13 11:58:29,381 : INFO: test_logo_img :The page of 'info' is opened
+2023-03-13 11:58:29,381 : DEBUG: test_logo_img :
+2023-03-13 11:58:38,945 : INFO: test_logo_img :The page of 'info' is opened
+2023-03-13 11:58:38,945 : INFO: test_logo_img :The page of 'info' is opened
+2023-03-13 11:58:38,946 : DEBUG: test_logo_img :
+2023-03-13 11:58:38,946 : DEBUG: test_logo_img :
