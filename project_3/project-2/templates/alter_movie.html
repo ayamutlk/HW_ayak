@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alter movie</title>
+    <link href="{{ url_for('static', filename= 'mystyle.css')}}" rel="stylesheet">
+</head>
+<body>
+    <a href="/">
+        <div class="container">
+ <a href="/">
+     <div class="container" ><img src="../static/hoo.png" alt="logo" style="width:5%; height:7%;float: left;"> </div></a>
+    </div>
+    </a>
+    <center style="font-size:200%;">
+        <form method="post" enctype="multipart/form-data">
+            <h1><label>Movie update  </label></h1>
+                      <div class="box">
+<div class="con">
+    <div class="image1">
+                <input type="file" name="filename">
+<br><br>
+            <label>Movie title</label>
+            <input type="text" name="movie_title"><br><br>
+            <label>Description</label>
+            <textarea name="description"></textarea><br><br>
+            <label>Director</label>
+            <input type="text" name="director"><br><br>
+            <label>Main actors</label>
+            <input type="text" name="actor"><br><br>
+            <label>Release year</label>
+            <input type="number" name="release_year"><br><br>
+            <label>Video</label>
+            <input type="text" name="video"><br><br>
+            <button class=" button button 5" type="submit">Update</button></div></div></div>
+        </form>
+    </center>
+</body>
+</html>
