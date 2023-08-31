@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: black;
+		}
+
+		.container {
+			width: 400px;
+			margin: 50px auto;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		label {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		button[type="submit"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: gray;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		button[type="submit"]:hover {
+			background-color: #E7A009;
+		}
+
+		p.error {
+			color: red;
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+
+ <a href="/"> <img src="../static/hoo.png" alt="logo" style="width:5%; height:7%;float: left; "> </a>
+
+	<div class="container">
+		<h1 style="color:#E7A009;">Login Page</h1>
+		{% if error %}
+			<p class="error">{{ error }}</p>
+		{% endif %}
+		<form action="/login" method="POST">
+			<label for="username">Username:</label>
+			<input type="text" name="username" placeholder="Enter your username">
+			<label for="password">Password:</label>
+			<input type="password" name="password" placeholder="Enter your password">
+			<button type="submit">Sign in</button>
+		</form>
+	</div>
+</body>
+</html>

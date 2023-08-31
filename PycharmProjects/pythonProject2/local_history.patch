@@ -1,0 +1,67 @@
+Index: finalproject/app.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/finalproject/app.py b/finalproject/app.py
+--- a/finalproject/app.py	
++++ b/finalproject/app.py	(date 1675129791607)
+@@ -51,11 +51,12 @@
+         release_year = request.form.get("release_year")
+         file = request.files.get("filename")
+         actor = request.form.get("actor")
++        video = request.form.get("video")
+         if allowed_file(file.filename):
+             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+         file_name = file.filename
+         movie_row = Movies(movie_title=movie_title, description=description, director=director,
+-                           release_year=release_year,filename=file_name, actor=actor)
++                           release_year=release_year,filename=file_name, actor=actor, video=video)
+         db.session.add(movie_row)
+         db.session.commit()
+         return redirect("/")
+@@ -81,6 +82,7 @@
+         db.session.add(review_row)
+         db.session.commit()
+         return redirect("/")
++
+ @app.route("/delete/<int:id>")
+ def erase(id):
+     data = Movies.query.get(id)
+@@ -92,6 +94,7 @@
+         db.session.delete(review)
+     db.session.commit()
+     return redirect("/")
++
+ @app.route("/alter_movie/<int:id>", methods=["POST", "GET"])
+ def alter_movie(id):
+     if request.method == "POST":
+@@ -100,9 +103,9 @@
+         description = request.form.get("description")
+         director = request.form.get("director")
+         release_year = request.form.get("release_year")
+-        file = request.files.get("filename")
+         actor = request.form.get("actor")
+-
++        video = request.form.get("video")
++        file = request.files.get("filename")
+         if allowed_file(file.filename):
+             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+         file_name = file.filename
+@@ -117,10 +120,13 @@
+         if request.files.get("filename"):
+             data.filename = file_name
+         if request.form.get("actor"):
+-            data.actor = actor
++            data.release_year = actor
++        if request.form.get("video"):
++            data.release_year = video
++
+         db.session.commit()
+         return redirect(url_for('movie_info', movie_id=id))
+     else:
+         return render_template("alter_movie.html")
+ if __name__ == "__main__":
+-    app.run()
+\ No newline at end of file
++    app.run()
