@@ -1,0 +1,25 @@
+<testsuite name="add_movie.Test functionality" tests="1" errors="0" failures="0" skipped="0" time="5.382838" timestamp="2023-03-28T08:57:46.877844" hostname="MININT-JKTN1EB"><testcase classname="add_movie.Test functionality" name="Add new movie to my website" status="passed" time="5.382838"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Add new movie to my website
+    Given Open web application ... passed in 0.183s
+    Then Count "img" in the "beginning" ... passed in 0.012s
+    Then click on log in logo ... passed in 0.072s
+    Then put the username and put the password ... passed in 0.341s
+    When Navigate to add movie button ... passed in 0.166s
+    And Add data to "movie_title" ... passed in 0.640s
+    And Add data to "director" ... passed in 0.634s
+    And Add data to "release_year" ... passed in 0.753s
+    And Add data to "description" ... passed in 0.551s
+    And Add data to "poster" ... passed in 0.501s
+    And Add data to "actor" ... passed in 0.516s
+    And Add data to "video" ... passed in 0.637s
+    And Click on ADD button ... passed in 0.212s
+    Given Open web application ... passed in 0.157s
+    Then Count "img" in the "end" ... passed in 0.007s
+    Then Validate end is bigger than beginning ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

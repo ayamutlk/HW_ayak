@@ -1,0 +1,14 @@
+<testsuite name="delet_review.Deleting a review" tests="1" errors="0" failures="0" skipped="0" time="3.934573" timestamp="2023-03-28T08:57:56.853416" hostname="MININT-JKTN1EB"><testcase classname="delet_review.Deleting a review" name="User deletes a review" status="passed" time="3.934573"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User deletes a review
+    Given The site "http://127.0.0.1:5000" is opened ... passed in 0.213s
+    Given The website "http://127.0.0.1:5000" is opened ... passed in 0.186s
+    When The user clicks on the "movie" that choose ... passed in 0.528s
+    When The user click on "delete review" button ... passed in 0.828s
+    Then The number of reviews should decrease by 1 ... passed in 2.180s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

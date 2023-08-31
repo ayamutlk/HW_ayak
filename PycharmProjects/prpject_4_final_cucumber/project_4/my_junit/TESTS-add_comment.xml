@@ -1,0 +1,16 @@
+<testsuite name="add_comment.Adding a comment to a review" tests="1" errors="0" failures="0" skipped="0" time="2.585724" timestamp="2023-03-28T08:57:41.482376" hostname="MININT-JKTN1EB"><testcase classname="add_comment.Adding a comment to a review" name="User adds a comment to a review" status="passed" time="2.585724"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: User adds a comment to a review
+    Given The site "http://127.0.0.1:5000" is opened ... passed in 0.166s
+    Then Click on the "movie" ... passed in 1.089s
+    When The user adds a "comment" with name ... passed in 0.075s
+    And New "review text" ... passed in 0.058s
+    And New "rating" stars ... passed in 0.046s
+    And Click on the "rating button" ... passed in 1.150s
+    Then The comment is added successfully ... passed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

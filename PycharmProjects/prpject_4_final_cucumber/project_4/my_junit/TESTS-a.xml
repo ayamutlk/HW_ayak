@@ -1,0 +1,62 @@
+<testsuite name="a.movie functional" tests="5" errors="0" failures="0" skipped="0" time="4.363182" timestamp="2023-03-28T08:57:38.892061" hostname="MININT-JKTN1EB"><testcase classname="a.movie functional" name="Clicking the top button should scroll to the top of the page" status="passed" time="1.668814"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Clicking the top button should scroll to the top of the page
+    Given The website "http://127.0.0.1:5000" is open ... passed in 0.470s
+    When I click on the "movie" from the homepage ... passed in 1.105s
+    And I click on the "top button" in info page ... passed in 0.084s
+    Then I should be scrolled to the top of the page ... passed in 0.010s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="a.movie functional" name="Clicking on the logo navigates to the About Me page" status="passed" time="0.340814"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Clicking on the logo navigates to the About Me page
+    Given Open the site "http://127.0.0.1:5000" ... passed in 0.224s
+    When I click on the logo "about" from homepage up the page ... passed in 0.111s
+    Then I am taken to the About Me page ... passed in 0.005s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="a.movie functional" name="Clicking on the logo image should navigate to the home page" status="passed" time="1.124652"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Clicking on the logo image should navigate to the home page
+    Given The site "http://127.0.0.1:5000" is open ... passed in 0.174s
+    When The user clicks on the "movie" image ... passed in 0.643s
+    And The user clicks on the "logo homepage" ... passed in 0.302s
+    Then The user should be navigated to the home page ... passed in 0.006s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="a.movie functional" name="User enters incorrect login credentials -- @1.1 " status="passed" time="0.598628"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: User enters incorrect login credentials -- @1.1 
+    Given The user is on the page url "http://127.0.0.1:5000" ... passed in 0.172s
+    Then Click on "login" ... passed in 0.162s
+    When The user enters aya and password ... passed in 0.140s
+    And The user clicks the "login button" ... passed in 0.125s
+    Then The user should see an indication of login incorrect ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="a.movie functional" name="User enters correct login credentials -- @1.2 " status="passed" time="0.630274"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: User enters correct login credentials -- @1.2 
+    Given The user is on the page url "http://127.0.0.1:5000" ... passed in 0.267s
+    Then Click on "login" ... passed in 0.066s
+    When The user enters aya and 123 ... passed in 0.154s
+    And The user clicks the "login button" ... passed in 0.140s
+    Then The user should see an indication of login correct ... passed in 0.004s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
